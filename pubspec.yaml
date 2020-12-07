@@ -1,7 +1,7 @@
 name: flutter_walkthrough_screen
 description: A flutter package which help developer in creating a customize onboarding screens of their app.
-version: 0.0.1
 author: Tushar Nikam <champ96k@gmail.com>
+version: 0.0.1
 homepage: https://github.com/champ96k/flutter-walkthrough-screen
 
 environment:

@@ -9,7 +9,7 @@ A flutter package which help developer in creating a customize onboarding screen
 ## Usage
 
 
-[Example](https://github.com/champ96k/flutter-walkthrough-screen/tree/main/example)
+[Example](https://github.com/champ96k/flutter_walkthrough_screen/tree/main/example)
 
 To use this package :
 

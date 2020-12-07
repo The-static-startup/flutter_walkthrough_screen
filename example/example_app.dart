@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_walkthrough_screen/walkthrough_screen.dart';
+import 'package:flutter_walkthrough_screen/flutter_walkthrough_screen.dart';
 import 'next_page.dart';
 
 void main() {
