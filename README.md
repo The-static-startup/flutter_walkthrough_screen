@@ -90,6 +90,54 @@ class TestScreen extends StatelessWidget {
 }
 ```
 
+
+# Customize your onboarding screen design
+
+
+###### Background color
+
+    ![](https://i.ibb.co/87Yd36V/background-color.png)
+
+
+
+###### Background gradient color
+
+    ![](https://i.ibb.co/F8GYJSR/background-gradient-color.png)
+
+
+###### Last page button
+
+    ![](https://i.ibb.co/5vLg0pG/last-page-button.png)
+
+
+
+###### Next page button
+
+    ![](https://i.ibb.co/qmVRSvV/next-page-button.png)
+
+
+###### Define next page route
+
+    ![](https://i.ibb.co/MM9f6Xx/page-route.png)
+
+
+###### Skip button
+
+    ![](https://i.ibb.co/f0qRn4C/skip-button.png)
+
+
+###### Selected dot Color
+
+    ![](https://i.ibb.co/6w344S3/selected-dot-Color.png)
+
+
+
+###### Unselected dot Color
+
+    ![](https://i.ibb.co/dtpjTD1/unselect-dot-Color.png)
+
+
+
 ### Created & Maintained By
 
 [Tushar Nikam](https://github.com/champ96k)
