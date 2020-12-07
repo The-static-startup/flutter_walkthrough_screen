@@ -59,6 +59,8 @@ class TestScreen extends StatelessWidget {
                  onbordingDataList: list,
                  colors: [
                    //list of colors for per pages
+                   Colors.white,
+                   Colors.red,
                  ],
                  pageRoute: MaterialPageRoute(
                    builder: (context) => NextPage(),
@@ -91,6 +93,8 @@ class TestScreen extends StatelessWidget {
 ### Created & Maintained By
 
 [Tushar Nikam](https://github.com/champ96k)
+
+
 ([linkedin](https://www.linkedin.com/in/tushar-nikam-a29a97131/))
 
 
