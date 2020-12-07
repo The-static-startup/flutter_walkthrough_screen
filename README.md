@@ -95,7 +95,7 @@ class TestScreen extends StatelessWidget {
 [Tushar Nikam](https://github.com/champ96k)
 
 
-([linkedin](https://www.linkedin.com/in/tushar-nikam-a29a97131/))
+[linkedin](https://www.linkedin.com/in/tushar-nikam-a29a97131/)
 
 
 ## Getting Started
