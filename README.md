@@ -1,5 +1,9 @@
 # Flutter Walkthrough Screen
+
 A flutter package which help developer in creating a customize onboarding screens of their app.
+
+[![HitCount](http://hits.dwyl.com/champ96k/flutter_walkthrough_screen.svg)](http://hits.dwyl.com/champ96k/flutter_walkthrough_screen)
+
 
 ## Screenshots
 
