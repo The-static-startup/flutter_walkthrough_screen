@@ -2,10 +2,7 @@
 
 A flutter package which help developer in creating a customize onboarding screens of their app.
 
-[![HitCount](http://hits.dwyl.com/champ96k/flutter_walkthrough_screen.svg)](http://hits.dwyl.com/champ96k/flutter_walkthrough_screen)
-
-
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues-raw/champ96k/flutter_walkthrough_screen?style=for-the-badge)
+[![HitCount](http://hits.dwyl.com/champ96k/flutter_walkthrough_screen.svg)](http://hits.dwyl.com/champ96k/flutter_walkthrough_screen) ![Bitbucket open issues](https://img.shields.io/bitbucket/issues-raw/champ96k/flutter_walkthrough_screen)
 
 
 ## Screenshots
