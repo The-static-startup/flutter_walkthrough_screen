@@ -1,21 +1,41 @@
+// Copyright 2013 Tushar Nikam. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
 library walkthrough_screen;
 import 'package:flutter/material.dart';
 
 class OnbordingData extends StatelessWidget {
+
+  ///Contain the list of ImageProvider such as Network Asset,SVG etc Images
   final ImageProvider<Object> image;
+
+  ///Title text
   final Widget titleText;
+
+  ///Description of the `walkthrough`
   final Widget descText;
-  final double imageHeight;
-  final double imageWidth;
-  final BoxFit fit;
-  final EdgeInsetsGeometry titlePadding;
-  final EdgeInsetsGeometry descPadding;
+
+  /// Height of the image Default is `MediaQuery.of(context).size.height * 0.5`
+  final double? imageHeight;
+
+  ///Width of the image default is `MediaQuery.of(context).size.width`
+  final double? imageWidth;
+
+  ///Default is BoxFit.cover
+  final BoxFit? fit;
+
+  ///Default padding is `EdgeInsets.symmetric(horizontal: 8.0)`,
+  final EdgeInsetsGeometry? titlePadding;
+
+  ///Default padding is `EdgeInsets.symmetric(horizontal: 8.0)`,
+  final EdgeInsetsGeometry? descPadding;
 
   const OnbordingData({
-    Key key,
-    @required this.image,
-    @required this.titleText,
-    @required this.descText,
+    Key? key,
+    required this.image,
+    required this.titleText,
+    required this.descText,
     this.imageHeight,
     this.imageWidth,
     this.fit,
@@ -32,13 +52,13 @@ class OnbordingData extends StatelessWidget {
         children: <Widget>[
 
           SizedBox(
-            height: 18.0,
+            height: 18.0
           ),
 
           Padding(
               padding: titlePadding == null
                   ? EdgeInsets.symmetric(horizontal: 8.0)
-                  : titlePadding,
+                  : titlePadding!,
               child: Wrap(
                 children: [
                   titleText,
@@ -56,7 +76,7 @@ class OnbordingData extends StatelessWidget {
           Padding(
               padding: descPadding == null
                   ? EdgeInsets.symmetric(horizontal: 8.0)
-                  : descPadding,
+                  : descPadding!,
               child: Wrap(
                 children: [
                   descText,
@@ -71,28 +91,88 @@ class OnbordingData extends StatelessWidget {
 
 /// A IntroScreen Class.
 class IntroScreen extends StatefulWidget {
+
+  ///contain list of Onbording screen data such as
+  ///OnbordingData(
+  //       image: AssetImage("images/pic3.png"),
+  //       fit: BoxFit.cover,
+  //       imageHeight: 250,
+  //       titleText: RichText(
+  //         textAlign: TextAlign.center,
+  //         text: TextSpan(
+  //           children: [
+  //             TextSpan(
+  //                 text: "Pickup delivery at \nyour ",
+  //                 style: TextStyle(
+  //                   color: Colors.black,
+  //                   fontSize: 20.0,
+  //                 )),
+  //             TextSpan(
+  //               text: "door ! ",
+  //               style: TextStyle(
+  //                   color: Colors.orange,
+  //                   fontSize: 22.0,
+  //                   fontWeight: FontWeight.w500),
+  //             ),
+  //           ],
+  //         ),
+  //       ),
+  //       descText: RichText(
+  //         textAlign: TextAlign.center,
+  //         text: TextSpan(
+  //           children: [
+  //             TextSpan(
+  //               text:
+  //               "Even to space with us! Together, pickup delivery at your home ",
+  //               style: TextStyle(
+  //                 color: Colors.grey,
+  //                 fontSize: 17.0,
+  //               ),
+  //             ),
+  //           ],
+  //         ),
+  //       ),
+  //       descPadding: EdgeInsets.symmetric(horizontal: 22.0),
+  //     ),
   final List<OnbordingData> onbordingDataList;
-  final MaterialPageRoute pageRoute;
+
+  ///
+  final MaterialPageRoute? pageRoute;
+
+  ///
   final List<Color> colors;
+
+  ///
   final Widget nextButton;
+
+  ///
   final Widget lastButton;
+
+  ///
   final Widget skipButton;
-  final Color selectedDotColor;
-  final Color unSelectdDotColor;
-  final Gradient gradient;
+
+  ///
+  final Color? selectedDotColor;
+
+  ///
+  final Color? unSelectdDotColor;
+
+  ///
+  final Gradient? gradient;
+
   IntroScreen(
-      {@required this.onbordingDataList,
+      {required this.onbordingDataList,
         this.pageRoute,
-        @required this.colors,
+        required this.colors,
         this.selectedDotColor,
         this.unSelectdDotColor,
         this.gradient,
-        @required this.nextButton,
-        @required this.lastButton,
-        @required this.skipButton});
+        required this.nextButton,
+        required this.lastButton,
+        required this.skipButton});
 
   void skipPage(BuildContext context) {
-    Navigator.push(context, pageRoute);
+    Navigator.push(context, pageRoute!);
   }
 
   @override
@@ -168,7 +248,7 @@ class IntroScreenState extends State<IntroScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
+                  TextButton(
                     child: lastPage ? Text("") : widget.skipButton,
                     onPressed: () => lastPage
                         ? null
@@ -185,7 +265,7 @@ class IntroScreenState extends State<IntroScreen> {
                                   (index) => _buildPageIndicator(index))),
                     ),
                   ),
-                  FlatButton(
+                  TextButton(
                     child: lastPage ? widget.lastButton : widget.nextButton,
                     onPressed: () => lastPage
                         ? widget.skipPage(context)
