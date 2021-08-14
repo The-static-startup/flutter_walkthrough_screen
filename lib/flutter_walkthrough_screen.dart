@@ -3,10 +3,10 @@
 // found in the LICENSE file.
 
 library walkthrough_screen;
+
 import 'package:flutter/material.dart';
 
 class OnbordingData extends StatelessWidget {
-
   ///Contain the list of ImageProvider such as Network Asset,SVG etc Images
   final ImageProvider<Object> image;
 
@@ -50,11 +50,7 @@ class OnbordingData extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-
-          SizedBox(
-            height: 18.0
-          ),
-
+          SizedBox(height: 18.0),
           Padding(
               padding: titlePadding == null
                   ? EdgeInsets.symmetric(horizontal: 8.0)
@@ -63,16 +59,17 @@ class OnbordingData extends StatelessWidget {
                 children: [
                   titleText,
                 ],
-              )
-          ),
-
+              )),
           Image(
             fit: fit == null ? BoxFit.cover : fit,
-            width: imageWidth == null ? MediaQuery.of(context).size.width : imageWidth,
-            height: imageHeight == null ? MediaQuery.of(context).size.height * 0.5  : imageHeight,
+            width: imageWidth == null
+                ? MediaQuery.of(context).size.width
+                : imageWidth,
+            height: imageHeight == null
+                ? MediaQuery.of(context).size.height * 0.5
+                : imageHeight,
             image: image,
           ),
-
           Padding(
               padding: descPadding == null
                   ? EdgeInsets.symmetric(horizontal: 8.0)
@@ -81,8 +78,7 @@ class OnbordingData extends StatelessWidget {
                 children: [
                   descText,
                 ],
-              )
-          ),
+              )),
         ],
       ),
     );
@@ -91,7 +87,6 @@ class OnbordingData extends StatelessWidget {
 
 /// A IntroScreen Class.
 class IntroScreen extends StatefulWidget {
-
   ///contain list of Onbording screen data such as
   ///OnbordingData(
   //       image: AssetImage("images/pic3.png"),
@@ -162,14 +157,14 @@ class IntroScreen extends StatefulWidget {
 
   IntroScreen(
       {required this.onbordingDataList,
-        this.pageRoute,
-        required this.colors,
-        this.selectedDotColor,
-        this.unSelectdDotColor,
-        this.gradient,
-        required this.nextButton,
-        required this.lastButton,
-        required this.skipButton});
+      this.pageRoute,
+      required this.colors,
+      this.selectedDotColor,
+      this.unSelectdDotColor,
+      this.gradient,
+      required this.nextButton,
+      required this.lastButton,
+      required this.skipButton});
 
   void skipPage(BuildContext context) {
     Navigator.push(context, pageRoute!);
@@ -205,11 +200,11 @@ class IntroScreenState extends State<IntroScreen> {
       decoration: BoxDecoration(
         color: page == currentPage
             ? (widget.selectedDotColor == null
-            ? Colors.blue
-            : widget.selectedDotColor)
+                ? Colors.blue
+                : widget.selectedDotColor)
             : (widget.unSelectdDotColor == null
-            ? Colors.grey
-            : widget.unSelectdDotColor),
+                ? Colors.grey
+                : widget.unSelectdDotColor),
         borderRadius: BorderRadius.circular(12),
       ),
     );
@@ -221,12 +216,12 @@ class IntroScreenState extends State<IntroScreen> {
       body: Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          gradient: widget.gradient ==null ? LinearGradient(
-              colors: [
-                Colors.white,
-                Colors.white,
-              ]
-          ) :  widget.gradient,
+          gradient: widget.gradient == null
+              ? LinearGradient(colors: [
+                  Colors.white,
+                  Colors.white,
+                ])
+              : widget.gradient,
           color: widget.colors.length < widget.onbordingDataList.length
               ? Colors.white
               : widget.colors[currentPage],
@@ -253,8 +248,8 @@ class IntroScreenState extends State<IntroScreen> {
                     onPressed: () => lastPage
                         ? null
                         : widget.skipPage(
-                      context,
-                    ),
+                            context,
+                          ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 16.0),
@@ -262,7 +257,7 @@ class IntroScreenState extends State<IntroScreen> {
                       child: Row(
                           children: List.generate(
                               widget.onbordingDataList.length,
-                                  (index) => _buildPageIndicator(index))),
+                              (index) => _buildPageIndicator(index))),
                     ),
                   ),
                   TextButton(
@@ -270,8 +265,8 @@ class IntroScreenState extends State<IntroScreen> {
                     onPressed: () => lastPage
                         ? widget.skipPage(context)
                         : controller.nextPage(
-                        duration: Duration(milliseconds: 300),
-                        curve: Curves.easeIn),
+                            duration: Duration(milliseconds: 300),
+                            curve: Curves.easeIn),
                   ),
                 ],
               ),
@@ -285,5 +280,3 @@ class IntroScreenState extends State<IntroScreen> {
     );
   }
 }
-
-

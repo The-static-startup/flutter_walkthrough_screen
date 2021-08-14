@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
           children: [
             TextSpan(
               text:
-              "our app can send you everywhere even space for only \$ 2.99 per month ",
+                  "our app can send you everywhere even space for only \$ 2.99 per month ",
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 17.0,
@@ -100,7 +100,7 @@ class HomePage extends StatelessWidget {
           children: [
             TextSpan(
               text:
-              "Even to space with us! Together, pickup delivery at your home ",
+                  "Even to space with us! Together, pickup delivery at your home ",
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 17.0,
@@ -141,7 +141,7 @@ class HomePage extends StatelessWidget {
           children: [
             TextSpan(
               text:
-              "Even to space with us! Together, pickup delivery at your home ",
+                  "Even to space with us! Together, pickup delivery at your home ",
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 17.0,
